@@ -170,7 +170,7 @@ body {
 
 @media (min-width:376px) {
   body{
-    background: url(img/banner.svg);
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/banner.svg);
     background-repeat: no-repeat;
     background-position: right 0 ;
   }
@@ -247,7 +247,7 @@ nav {
   }
   
   .wrap-header {
-  background-image: url(img/banner_sm.svg);
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/banner_sm.svg);
   background-repeat: no-repeat;
   background-size: 375px;
   }
