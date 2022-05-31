@@ -1,0 +1,698 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* RESET */
+
+.container {
+  padding-right: 5px;
+  padding-left: 5px;
+  max-width: 1085px;
+  margin: 0 auto;
+  /* padding: 0 8px; */
+  /* border: 1px solid #ccc; */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+*,
+*::before,
+*::after {
+  Box-sizing: border-box;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+/*my reset*/
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  background-image:
+    url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home.svg),
+    url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/home_footer.svg);
+  background-position: top right, bottom 150px center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 65vw, 100vw;
+}
+
+.topBtn {
+  position: fixed;
+  right: 16px;
+  top: 90%;
+  width: 50px;
+  display: none;
+}
+
+.topBtnBig {
+  position: fixed;
+  right: 16px;
+  top: 85%;
+  width: 70px;
+}
+
+
+@media (max-width:576px) {
+
+  .topBtnBig{
+    display: none;
+  }
+
+  .topBtn{
+    display: block;
+  }
+
+  body {
+    background-image: none;
+  }
+
+  nav {
+    border-bottom: 2px solid #FFD153;
+  }
+
+  header {
+    flex-direction: column;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 10px;
+  align-items: center;
+}
+
+
+.logo {
+  display: inline-block;
+  width: 30vw;
+}
+
+@media (min-width:768px) {
+  .logo {
+    width: 20vw;
+  }
+}
+
+.btn {
+  width: 128px;
+  height: 40px;
+  background: #FF5D50;
+  color: white;
+  font-size: 16px;
+  padding: 10px 32px 8px 32px;
+  border-radius: 22px;
+}
+
+.btn:hover{
+  color: #fff;
+  background: #221e1f;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.slogan>li:first-child {
+  padding-bottom: 8px;
+}
+
+.slogan>li:nth-child(2) {
+  padding-bottom: 16px;
+  font-size: 32px;
+}
+
+.banner {
+  width: 100%;
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home_sm.svg);
+  background-repeat: no-repeat;
+  background-position: center top 95%;
+
+}
+
+@media (min-width:576px) {
+  .banner {
+    width: 50%;
+    background-image: none;
+  }
+
+  .slogan>li:nth-child(2) {
+    font-size: 48px;
+  }
+
+  .sns>h2,
+  .feature>h2 {
+    font-size: 48px;
+  }
+
+  .funcPay>ul>li:nth-child(1) {
+    font-size: 32px;
+  }
+
+  .rate>h2,
+  footer>h2 {
+    font-size: 32px;
+  }
+
+}
+
+.sns {
+  padding: 150px 0;
+}
+
+.sns>h2 {
+  padding-bottom: 48px;
+  font-size: 32px;
+}
+
+.card {
+  width: 33%;
+  display: inline-block;
+}
+
+@media (max-width:768px) {
+
+  .card {
+    width: 100%;
+    display: block;
+    padding-bottom: 24px;
+  }
+
+}
+
+.card>img {
+  width: 90px;
+}
+
+@media (max-width:576px) {
+  .card>img {
+    width: 60px;
+  }
+
+}
+
+.card>h3 {
+  padding: 24px 0;
+}
+
+.feature {
+  margin: -8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 60px;
+}
+
+.feature>h2 {
+  font-size: 32px;
+  padding-bottom: 16px;
+}
+
+.feature-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 48px;
+}
+
+.feature-card {
+  width: 260px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.14);
+  background: #fff;
+  margin-bottom: 10px;
+}
+
+@media (max-width:992px) {
+  .feature-card {
+    width: 24%;
+  }
+
+}
+
+@media (max-width:768px) {
+  .feature-list {
+    justify-content: space-around;
+  }
+
+  .feature-card {
+    width: 260px;
+  }
+
+}
+
+.feature-card>img {
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+}
+
+.feature-card>h2 {
+  padding-top: 16px;
+}
+
+.feature-card>p {
+  padding: 16px 0 24px 0;
+}
+
+.functions {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 100px;
+}
+
+
+@media (max-width:576px) {
+  .functions {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-bottom: 50px;
+  }
+
+  .funcPay {
+    text-align: center;
+  }
+
+  .funcPay .btn {
+    margin: 0 auto;
+  }
+
+  .funcList {
+    flex-direction: column;
+  }
+
+}
+
+
+.funcList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 50%;
+}
+
+.funcCard {
+  margin-bottom: 28px;
+  width: 230px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.14);
+  padding: 32px;
+}
+
+
+.rad {
+  width: 86px;
+  height: 86px;
+  border-radius: 999em;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.14);
+  position: relative;
+}
+
+.rad>img {
+  position: absolute;
+  right: 20%;
+  top: 20%;
+}
+
+.funcCard>h3 {
+  padding-top: 24px;
+  padding-bottom: 16px;
+}
+
+.funcCard>p {
+  padding-bottom: 16px;
+}
+
+.funcPay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.funcPay ul {
+  padding-bottom: 8px;
+}
+
+.funcPay li {
+  padding-bottom: 16px;
+}
+
+.rateList {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -8px;
+  padding-bottom: 100px;
+  justify-content: center;
+}
+
+.rateBox {
+  width: 352px;
+  height: 248px;
+  position: relative;
+  padding: 56px 8px 0 8px;
+}
+
+
+@media (max-width:992px) {
+  .rateBox {
+    width: 335px;
+    margin-bottom: 100px;
+  }
+
+}
+
+@media (max-width:576px) {
+  .rateList>.rateBox:nth-child(2) {
+    display: none;
+  }
+
+  .rateList>.rateBox:nth-child(3) {
+    display: none;
+  }
+
+  .rateList {
+    padding-bottom: 30px;
+  }
+
+
+}
+
+.userIcon {
+  width: 80px;
+  height: 80px;
+  border-radius: 999em;
+  position: absolute;
+  left: 32px;
+  z-index: 1;
+}
+
+.rateText {
+  position: absolute;
+  top: 112px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.14);
+  padding: 48px 32px;
+  border-bottom: 1px solid #DDDDDD;
+  background: #fff;
+}
+
+.rateText>p {
+  margin: -4px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.rateText>ul {
+  padding-top: 24px;
+}
+
+.rateText li:first-child {
+  padding-bottom: 8px;
+}
+
+.stars {
+  position: absolute;
+  bottom: -84px;
+  right: 32px;
+  z-index: 1;
+}
+
+
+.dots {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 300px;
+}
+
+@media (max-width:576px) {
+  .dots {
+    padding-bottom: 30px;
+  }
+
+}
+
+.dot {
+  border-radius: 999em;
+  background: #DDDDDD;
+  width: 10px;
+  height: 10px;
+  margin: 0 4px;
+}
+
+.longDot {
+  border-radius: 50px;
+  width: 16px;
+  height: 10px;
+  background: #f5ca52;
+  margin: 0 4px;
+}
+
+footer {
+  background-image:
+    url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/footer_sm.svg);
+  background-position: bottom 220px center;
+  background-repeat: no-repeat;
+  background-size: 100vw;
+
+
+}
+
+@media (min-width:576px) {
+  footer {
+    background-image: none;
+  }
+}
+
+footer>h2 {
+  padding-top: 100px;
+  padding-bottom: 48px;
+}
+
+@media (max-width:576px) {
+  footer>h2 {
+    padding-top: 320px;
+    padding-bottom: 32px;
+  }
+
+
+
+}
+
+footer .btn {
+  display: inline-block;
+  margin-bottom: 100px;
+}
+
+h4 {
+  padding: 16px 0;
+  background: #F5F5F5;
+}
+
+/* color | font */
+
+/* 黃色色碼 #f5ca52 */
+
+.text-orange {
+  color: #ff5d50;
+}
+
+.text-blue {
+  color: #56c4c5;
+}
+
+.text-darkGary {
+  color: #221e1f;
+}
+
+.text-gary {
+  color: #747474;
+}
+
+.text16 {
+  font-size: 1em;
+}
+
+.text18 {
+  font-size: 1.125em;
+}
+
+.text20 {
+  font-size: 1.25em;
+}
+
+.text24 {
+  font-size: 1.5em;
+}
+
+.text28 {
+  font-size: 1.75em;
+}
+
+.text32 {
+  font-size: 3em;
+}
+
+.text46 {
+  font-size: 2.875em;
+}
+
+.text48 {
+  font-size: 3em;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.lh15 {
+  line-height: 1.5;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-blue {
+  background: #56c4c5;
+}
